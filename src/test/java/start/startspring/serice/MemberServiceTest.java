@@ -2,6 +2,7 @@ package start.startspring.serice;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import start.startspring.domain.Member;
 
 import static org.assertj.core.api.Assertions.*;
@@ -9,7 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
+    @Autowired
+    public MemberServiceTest(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
+    MemberService memberService;
 
     @Test
     void 회원가입() {
