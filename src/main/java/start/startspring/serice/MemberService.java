@@ -6,10 +6,12 @@ import start.startspring.domain.Member;
 import start.startspring.repository.MemberRepository;
 import start.startspring.repository.MemoryMemberRepository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class MemberService {
 
 
